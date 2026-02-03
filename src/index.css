@@ -1,0 +1,36 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  margin: 0px;
+  padding: 0px;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.25s;
+
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  border: 0px;
+  border-color: black;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+h2 {
+  margin: 5px;
+}
