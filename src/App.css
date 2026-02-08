@@ -46,3 +46,56 @@
   width: 50%;
   margin: 10px auto;
 }
+
+* {
+  z-index: 1;
+}
+
+svg {
+  z-index: 0;
+}
+
+#coupon-list {
+  flex: 1;
+}
+
+.coupon-div {
+  display: grid;
+}
+
+.coupon-div > div {
+  background-color: #ff0000;
+  color: white;
+
+  width: 20rem;
+  height: 8rem;
+
+  margin: 1rem auto;
+  backface-visibility: hidden;
+  transition-duration: 500ms;
+  transition-property: transform;
+
+  transform: rotateY(0deg);
+
+  grid-area: 1 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 12px;
+
+  border-radius: 8px;
+}
+
+.coupon-div > div.flipped {
+  transform: rotateY(180deg);
+}
+
+.coupon-div > div > p {
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  padding: 0.5rem;
+}
