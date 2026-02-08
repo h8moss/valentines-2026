@@ -67,15 +67,13 @@ function App() {
       'Acurrucadas con bees',
       'Vemos la serie que tu quieras',
       'flores para Beeseebeees'
-    ])
-
-    , [])
+    ]), [])
 
   const [flipped, setFlipped] = useState<number[]>([]);
 
   return (
     <>
-      <div id="root">
+      <div id="parent">
         {!saidYes &&
           <>
             <h1>BEES ¿Quieres ser mi San Valentín?</h1>
