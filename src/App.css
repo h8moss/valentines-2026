@@ -99,3 +99,8 @@ svg {
 
   padding: 0.5rem;
 }
+
+#spacer {
+  height: 5rem;
+  width: 100%;
+}

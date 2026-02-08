@@ -63,9 +63,10 @@ function App() {
       'Cita en la que costillitas cocina',
       'Cosquillas infinitas (No te puedes negar)',
       'Besitos a bees',
-      'Masaje',
-      'Acurrucadas',
-      'Vemos la serie que tu quieras'
+      'Masaje para la bees (puede tener final feliz)',
+      'Acurrucadas con bees',
+      'Vemos la serie que tu quieras',
+      'flores para Beeseebeees'
     ])
 
     , [])
@@ -77,9 +78,9 @@ function App() {
       <div id="root">
         {!saidYes &&
           <>
-            <h1>¿Quieres ser mi San Valentín?</h1>
+            <h1>BEES ¿Quieres ser mi San Valentín?</h1>
             <div id="sureBox">
-              {Array.from({ length: noCounter }).map(() => <h2 >¿Segura?</h2>)}
+              {Array.from({ length: noCounter }).map(() => <h2>¿Plis?</h2>)}
             </div>
 
             <div id="buttonBox">
@@ -105,13 +106,17 @@ function App() {
             <img id="sealion" src={seaLion} />
 
             <div id="coupon-list">
+              <h2>Cupones para bees!!!!!</h2>
               {numbers(coupons.length).map(v =>
                 <div className="coupon-div" key={v} onClick={() => setFlipped(nums => [...nums, v])}>
                   <div className={flipped.includes(v) ? '' : 'flipped'}><p>{coupons[v]}</p></div>
                   <div className={flipped.includes(v) ? 'flipped' : ''}></div>
                 </div>
               )}
+
+              <div id="spacer"> </div>
             </div>
+
           </>
         }
       </div>
