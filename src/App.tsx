@@ -68,7 +68,7 @@ function App() {
       'Vemos la serie que tu quieras',
       'flores para Beeseebeees'
     ]), 
-      'SHARKBEESAURIO!'], [])
+      'SHARKBEEZILLA!'], [])
 
   const [flipped, setFlipped] = useState<number[]>([]);
 
