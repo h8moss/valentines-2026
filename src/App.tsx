@@ -46,17 +46,17 @@ function App() {
     setNoCounter(v => v + 1);
   }
 
-  const colors = [
+  const colors = useMemo(() => [
     '#ff0000',
     '#ff0059',
     '#ff7fab',
     '#c40024',
     '#9000ff',
     '#ff00d8'
-  ]
+  ], []);
 
   const coupons = useMemo(() =>
-    randomized([
+    [...randomized([
       'Me coges (tu mandas)',
       'Noche de peliculas',
       'Cita que yo pago',
@@ -67,7 +67,8 @@ function App() {
       'Acurrucadas con bees',
       'Vemos la serie que tu quieras',
       'flores para Beeseebeees'
-    ]), [])
+    ]), 
+      'SHARKBEESAURIO!'], [])
 
   const [flipped, setFlipped] = useState<number[]>([]);
 
@@ -90,14 +91,15 @@ function App() {
 
         {saidYes &&
           <>
-            {numbers(50).map(i => <Heart
-              size={generateSize()}
-              color={randomPick(colors)}
-              key={i}
-              left={rand(window.innerWidth - 50)}
-              top={rand(window.innerHeight - 50)}
-              delay={rand(500)}
-            />)
+            {numbers(50).map(i =>
+              <Heart
+                size={generateSize()}
+                color={randomPick(colors)}
+                key={i}
+                left={rand(window.innerWidth - 50)}
+                top={rand(window.innerHeight - 50)}
+                delay={rand(500)}
+              />)
             }
 
             <h1>Yippee!!!!!!!!!!!!!!!!!!!!!</h1>
@@ -112,9 +114,8 @@ function App() {
                 </div>
               )}
 
-              <div id="spacer"> </div>
+              <div id="spacer"></div>
             </div>
-
           </>
         }
       </div>
